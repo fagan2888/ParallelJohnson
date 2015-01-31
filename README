@@ -1,0 +1,15 @@
+Please use the command
+
+	mpic++ ParallelJohnson.cpp -o parallel_johnson
+
+to build the executable parallel_johnson.
+
+Please use the command line to run the code
+	
+	mpirun -machinefile machines -np num_proc ./parallel_johnson webfile source_node sol_file
+
+where
+	num_proc: number of processes.
+	webfile: the file containing the web graph. It's in the format like the graph http://snap.stanford.edu/data/web-Google.html. The node numbers are continuous intergers starting from 0.
+	source_node: the source node number.
+	sol_file: file to save the distance results.
